@@ -1,0 +1,12 @@
+{
+	"prefix": "dev!",
+  "ver": "1.5",
+  "lib": "discord.js",
+  "libver": "14",
+  	"color": {
+		"HEX": "#1d76ee"
+	},
+	"messages": {
+		"COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
+	}
+}
