@@ -56,4 +56,18 @@ client.on("invalidated", log.warn)
 client.on("invalidRequestWarning", log.warn)
 client.on("rateLimit", log.warn)
 
-
+process.on("unhandledRejection", (reason, p) => {
+  log.error(" [Error_Handling] :: Unhandled Rejection/Catch");
+  log.error(reason, p);
+  console.log(reason, p);
+});
+process.on("uncaughtException", (err, origin) => {
+  log.error(" [Error_Handling] :: Uncaught Exception/Catch");
+  log.error(err, origin);
+  console.log(err, origin);
+});
+process.on("uncaughtExceptionMonitor", (err, origin) => {
+  log.error(" [Error_Handling] :: Uncaught Exception/Catch (MONITOR)");
+  log.error(err, origin);
+  console.log(err, origin);
+});
