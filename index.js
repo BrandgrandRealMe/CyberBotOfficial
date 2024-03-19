@@ -25,7 +25,7 @@ const log = bl({ logfolder: 'logs', webhook: logurl});
 const Database = require("@replit/database")
 const db = new Database()
 
-log.
+
 log.quiet("hey!")
 
 client.commands = new Collection()
