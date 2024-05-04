@@ -122,8 +122,9 @@ module.exports = {
     }
 
     if (interaction.options.get("mention") !== null) {
+      console.log(interaction.options.getMentionable("mention"))
       announcementChannel.send({
-        content: `Mention: ${interaction.options.get("mention")}`,
+        content: `Mention: ${interaction.options.getMentionable("mention")}`,
         embeds: [announcementEmbed],
       });
     } else {
