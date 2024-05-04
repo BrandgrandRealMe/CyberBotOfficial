@@ -20,16 +20,16 @@ module.exports = {
       required: true,
     },
     {
-      name: "mention",
-      description: "Set the mention",
-      type: 9,
-      required: false,
-    },
-    {
       name: "desc",
       description: "Set the description",
       type: 3,
       required: true,
+    },
+    {
+      name: "mention",
+      description: "Set the mention",
+      type: 9,
+      required: false,
     },
     {
       name: "title",
