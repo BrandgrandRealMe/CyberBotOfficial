@@ -62,6 +62,7 @@ module.exports = {
     const RAWimg = interaction.options.getAttachment("image");
 
     if (!announcementChannel.permissionsFor(muser).has(PermissionsBitField.Flags.SendMessages)) return interaction.editReply({ content: "You don't have permission to send messages in that channel." });
+    console.log(interaction.guild.me)
     if (!announcementChannel.permissionsFor(interaction.guild.me).has(PermissionsBitField.Flags.SendMessages)) return interaction.editReply({ content: "I don't have permission to send messages in that channel." });
     console.log("Sending announcement to " + announcementChannel.name);
     try {
