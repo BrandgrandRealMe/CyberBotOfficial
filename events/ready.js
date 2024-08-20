@@ -1,4 +1,3 @@
-const webserver = require(`../handlers/HttpServer.js`)
 const { ActivityType } = require('discord.js');
 const client = require('..');
 const db = client.db
