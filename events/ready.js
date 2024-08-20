@@ -1,4 +1,3 @@
-import server from '../handlers/ExpressServer.js';
 const { ActivityType } = require('discord.js');
 const client = require('..');
 const db = client.db
@@ -28,12 +27,6 @@ client.on("ready", () => {
   // Clear the timer if the bot has logged in before it expires
   clearTimeout(loginTimer);
   const readytime = performance.now();
-
-  server.listen(server.get('port'), () => {
-    console.log(`Server running on port ${server.get('port')}`);
-  });
-  
-  
   log.info(`Ready Time: ${readytime - client.starttime} ms`);
   
 
