@@ -1,8 +1,7 @@
-import express from 'express';
+const express = require('express');
+const settings = require('../config.json');
+const statusModule = require('./StatusJSON.js');
 
-import settings from "../config.json";
-
-import statusModule from "./StatusJSON.js";
 
 const app = express();
 const port = settings.PORT; // Adjust port as needed
