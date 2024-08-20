@@ -3,8 +3,8 @@ const settings = require('../config.json');
 const statusModule = require('./StatusJSON.js');
 
 const port = settings.PORT;
-
-const handleRequest = async (req, res) => {
+module.exports = (client) => {
+  const handleRequest = async (req, res) => {
     if (req.url === '/status/raw') {
       try {
         const status = await statusModule();
@@ -13,20 +13,20 @@ const handleRequest = async (req, res) => {
       } catch (error) {
         console.error(error);
         res.writeHead(500, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Internal Server Error'   
-   }));
+        res.end(JSON.stringify({
+          error: 'Internal Server Error'
+        }));
       }
     } else {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Not Found');   
-  
+      res.end('Not Found');
+
     }
   };
-  
+
   const server = http.createServer(handleRequest);
 
   server.listen(port, () => {
     console.log(`Server listening on port ${port}`);
   });
-
-module.exports = server;
+}

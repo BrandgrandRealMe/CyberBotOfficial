@@ -1,4 +1,5 @@
-const client = require('../index.js');
+
+module.exports = (client) => {
 
 async function getStatus() {
   try {
@@ -22,4 +23,4 @@ async function getStatus() {
   }
 }
 
-module.exports = getStatus;
+}
