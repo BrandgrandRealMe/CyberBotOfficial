@@ -1,6 +1,3 @@
-
-module.exports = (client) => {
-
 async function getStatus() {
   try {
     const serverOnline = true;
@@ -23,4 +20,4 @@ async function getStatus() {
   }
 }
 
-}
+export default getStatus;

@@ -1,6 +1,6 @@
 const http = require('http');
 const settings = require('../config.json');
-const statusModule = require('./StatusJSON.js');
+const statusModule = require('../utils/StatusJSON.js');
 
 const port = settings.PORT;
 module.exports = (client) => {
