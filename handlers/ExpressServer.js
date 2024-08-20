@@ -16,8 +16,12 @@ app.get('/status/raw', async (req, res) => {
     }
 });
 
+try {
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
+} catch (error) {
+    console.log(`Error: ${error}`)
+}
 
 module.exports = app;
