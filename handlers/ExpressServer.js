@@ -6,7 +6,6 @@ const statusModule = require('./StatusJSON.js');
 const app = express();
 const port = settings.PORT; // Adjust port as needed
 
-
 app.get('/status/raw', async (req, res) => {
     try {
         const status = await statusModule();
