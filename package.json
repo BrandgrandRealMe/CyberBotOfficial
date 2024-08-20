@@ -25,6 +25,7 @@
     "discord-api-types": "^0.30.0",
     "discord-webhook-node": "^1.1.8",
     "discord.js": "^14.0.2",
+    "discordjs-v14-bot": "file:",
     "dotenv": "^16.3.1",
     "express": "^4.19.2",
     "ipfs": "^0.66.0",

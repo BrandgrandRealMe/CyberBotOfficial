@@ -1,4 +1,4 @@
-import { client } from "../bot.js";
+const client = require('../bot.js');
 
 async function getStatus() {
   try {
@@ -22,4 +22,4 @@ async function getStatus() {
   }
 }
 
-export default getStatus;
+module.exports = getStatus;
