@@ -9,6 +9,7 @@ console.log(`Port set to ${port}`)
 app.get('/status/raw', async (req, res) => {
     try {
         const status = await statusModule();
+        console.log(status)
         res.json(status);
     } catch (error) {
         console.error(error);
