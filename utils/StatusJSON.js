@@ -1,3 +1,5 @@
+import { client } from "../index.js";
+
 async function getStatus() {
   try {
     const serverOnline = true;
@@ -14,7 +16,7 @@ async function getStatus() {
     console.error(error);
     return {
       botOnline: false,
-      serverOnline: false,
+      serverOnline: true,
       botPing: null,
     };
   }
