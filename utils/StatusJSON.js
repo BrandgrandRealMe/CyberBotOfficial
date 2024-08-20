@@ -20,4 +20,4 @@ async function getStatus() {
   }
 }
 
-export default getStatus;
+module.exports = getStatus;
