@@ -15,9 +15,9 @@ async function getStatus() {
   } catch (error) {
     console.error(error);
     return {
-      botOnline: unkown,
-      serverOnline: unkown,
-      botPing: unkown,
+      botOnline: "unknown",
+      serverOnline: "unknown",
+      botPing: "unknown",
     };
   }
 }
