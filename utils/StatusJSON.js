@@ -1,4 +1,4 @@
-import { client } from "../index.js";
+const { client } = require("../index.js");
 
 async function getStatus() {
   try {
