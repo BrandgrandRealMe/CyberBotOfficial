@@ -1,5 +1,6 @@
 const chalk = require('chalk')
 const fs = require('fs');
+const path = require('path');
 var AsciiTable = require('ascii-table')
 const config = require('../config.json')
 var table = new AsciiTable()
