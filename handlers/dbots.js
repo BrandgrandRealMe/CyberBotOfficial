@@ -1,6 +1,6 @@
 const dbots = require('dbots')
 
-const keys = { topgg: process.env['TOPGGKEY'] }
+const keys = { topgg: process.env['CYBERBOT_TOPGGKEY'] }
 module.exports = (client) => {
   log = client.log
   const poster = new dbots.Poster({

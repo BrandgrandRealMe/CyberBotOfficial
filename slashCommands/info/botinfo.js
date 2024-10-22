@@ -25,7 +25,7 @@ module.exports = {
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    const inviteUrl = `https://discord.com/api/oauth2/authorize?client_id=${process.env.CLIENT_ID}&permissions=8&scope=bot%20applications.commands`;
+    const inviteUrl = `https://discord.com/api/oauth2/authorize?client_id=${process.env.CYBERBOT_CLIENT_ID}&permissions=8&scope=bot%20applications.commands`;
     const embed = new EmbedBuilder()
       .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL() })
       .setTitle(`🤖 Botinfo`)
