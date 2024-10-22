@@ -40,8 +40,8 @@ module.exports = client;
 
 
 
-fs.readdirSync('./handlers').forEach((handler) => {
-  require(`./handlers/${handler}`)(client)
+fs.readdirSync('../handlers').forEach((handler) => {
+  require(`../handlers/${handler}`)(client)
 });
 
 
