@@ -1,9 +1,9 @@
 {
-  "prefix": "dev!",
+  "prefix": "!",
   "ver": "1.5",
   "lib": "discord.js",
   "libver": "14",
-  "PORT": 2255,
+  "PORT": 2238,
   	"color": {
 		"HEX": "#1d76ee"
 	},
