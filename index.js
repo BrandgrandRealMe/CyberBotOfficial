@@ -39,9 +39,10 @@ client.supportinv = "https://discord.gg/Bm6fMsA";
 module.exports = client;
 
 
+const handlersPath = path.join(__dirname, 'handlers');
 
-fs.readdirSync('/handlers').forEach((handler) => {
-  require(`/handlers/${handler}`)(client)
+fs.readdirSync(handlersPath).forEach((handler) => {
+  require(`${handlersPath}/${handler}`)(client)
 });
 
 
