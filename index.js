@@ -19,7 +19,7 @@ const logurl = process.env['CYBERBOT_LOGURL']
 const fs = require('fs');
 const config = require('./config.json');
 const bl = require('betterdevlogs'); // ./log.js
-const log = bl({ logfolder: 'logs', webhook: logurl});
+const log = bl({ logfolder: 'logs'});
 const Database = require("@replit/database")
 const db = new Database()
 
