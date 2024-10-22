@@ -42,7 +42,7 @@ module.exports = client;
 const handlersPath = path.join(__dirname, 'handlers');
 
 fs.readdirSync(handlersPath).forEach((handler) => {
-  require(`${handlersPath}/${handler}`)(client)
+  require(path.join(handlersPath, handler))(client)
 });
 
 
