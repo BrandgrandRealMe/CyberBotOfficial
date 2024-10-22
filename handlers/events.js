@@ -18,7 +18,7 @@ module.exports = (client) => {
     .setTitle('Events')
     .setColor("#f8a532");
   
-    const eventsPath = path.join(__dirname, 'events');
+    const eventsPath = path.join(__dirname, '..', 'events');
     fs.readdirSync(eventsPath).filter((file) => file.endsWith('.js')).forEach((event) => {
       	require(`${eventsPath}/${event}`);
 	table.addRow(event.split('.js')[0], '✅')

@@ -7,7 +7,7 @@ var table = new AsciiTable()
 table.setHeading('Commands', 'Stats').setBorder('|', '=', "0", "0")
 
 module.exports = (client) => {
-	const commandsPath = path.join(__dirname, 'commands');
+	const commandsPath = path.join(__dirname, '..', 'commands');
 	fs.readdirSync(commandsPath).forEach(dir => {
 		const files = fs.readdirSync(`${commandsPath}/${dir}/`).filter(file => file.endsWith('.js'));
 		if(!files || files.length <= 0) console.log(chalk.red("Commands - 0"))

@@ -33,7 +33,7 @@ module.exports = (client) => {
     .setColor("#f8a532");
 
 
-  const slashCommandsPath = path.join(__dirname, 'slashCommands');
+  const slashCommandsPath = path.join(__dirname, '..', 'slashCommands');
   fs.readdirSync(slashCommandsPath).forEach(async dir => {
     const files = fs.readdirSync(`${slashCommandsPath}/${dir}/`).filter(file => file.endsWith('.js'));
 
