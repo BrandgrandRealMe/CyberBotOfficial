@@ -30,12 +30,14 @@ module.exports = (client) => {
   const embed = new MessageBuilder() // Create Styled embed
     .setTitle('Slash Commands')
     .setColor("#f8a532");
-  
-  fs.readdirSync('./slashCommands/').forEach(async dir => {
-    const files = fs.readdirSync(`./slashCommands/${dir}/`).filter(file => file.endsWith('.js'));
+
+
+  const slashCommandsPath = path.join(__dirname, 'slashCommands');
+  fs.readdirSync(slashCommandsPath).forEach(async dir => {
+    const files = fs.readdirSync(`${slashCommandsPath}/${dir}/`).filter(file => file.endsWith('.js'));
 
     for (const file of files) {
-      const slashCommand = require(`../slashCommands/${dir}/${file}`);
+      const slashCommand = require(`${slashCommandsPath}/${dir}/${file}`);
       slashCommands.push({
         name: slashCommand.name,
         description: slashCommand.description,
