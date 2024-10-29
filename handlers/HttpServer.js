@@ -5,7 +5,7 @@ const statusModule = require('../utils/StatusJSON.js');
 const port = settings.PORT;
 module.exports = (client) => {
   const handleRequest = async (req, res) => {
-    if (req.url === '/status/raw') {
+    if (req.url === '/CyberBot/status/raw') {
       try {
         const status = await statusModule();
         res.writeHead(200, { 'Content-Type': 'application/json' });
