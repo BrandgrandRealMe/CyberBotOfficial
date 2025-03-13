@@ -8,7 +8,7 @@ table.setHeading('Events', 'Stats').setBorder('│', '⎯', "┬", "┴")
 const { Webhook, MessageBuilder } = require('discord-webhook-node');
 
 // Get Config from .env
-const logWH = process.env.CYBERBOT_LOGURL
+const logWH = process.env.LOGURL
 
 module.exports = (client) => {
   const log = client.log;

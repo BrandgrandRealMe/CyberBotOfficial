@@ -11,7 +11,7 @@ module.exports = {
     await interaction.deferReply();
     const config = client.config
     const color = config.color.HEX
-    const BOTinviteUrl = `https://discord.com/api/oauth2/authorize?client_id=${process.env.CYBERBOT_CLIENT_ID}&permissions=8&scope=bot%20applications.commands`;
+    const BOTinviteUrl = `https://discord.com/api/oauth2/authorize?client_id=${process.env.CLIENT_ID}&permissions=8&scope=bot%20applications.commands`;
     const ServerinviteUrl = client.supportinv;
     
     const embed = new EmbedBuilder()

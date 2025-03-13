@@ -16,9 +16,9 @@ const table = new AsciiTable().setHeading('Slash Commands', 'Status').setBorder(
 const { Webhook, MessageBuilder } = require('discord-webhook-node');
 
 // Get Config from .env
-const logWH = process.env.CYBERBOT_LOGURL
-const TOKEN = process.env.CYBERBOT_TOKEN;
-const CLIENT_ID = process.env.CYBERBOT_CLIENT_ID;
+const logWH = process.env.LOGURL
+const TOKEN = process.env.TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
 
 const rest = new REST({ version: '9' }).setToken(TOKEN);
 
@@ -66,8 +66,8 @@ module.exports = (client) => {
   (async () => {
     try {
       await rest.put(
-        process.env.CYBERBOT_GUILD_ID ?
-          Routes.applicationGuildCommands(CLIENT_ID, process.env.CYBERBOT_GUILD_ID) :
+        process.env.GUILD_ID ?
+          Routes.applicationGuildCommands(CLIENT_ID, process.env.GUILD_ID) :
           Routes.applicationCommands(CLIENT_ID),
         { body: slashCommands }
       );

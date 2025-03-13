@@ -15,7 +15,7 @@ const client = new Client({
 	], 
 	partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember, Partials.Reaction] 
 });
-const logurl = process.env['CYBERBOT_LOGURL']
+const logurl = process.env['LOGURL']
 const fs = require('fs');
 const config = require('./config.json');
 const bl = require('betterdevlogs'); // ./log.js
@@ -47,7 +47,7 @@ fs.readdirSync(handlersPath).forEach((handler) => {
 
 
 
-client.login(process.env.CYBERBOT_TOKEN); client.starttime = performance.now();
+client.login(process.env.TOKEN); client.starttime = performance.now();
 client.on("warn", log.warn)
 //client.on("debug", log.quiet)
 client.on("error", log.error)
