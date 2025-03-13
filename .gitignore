@@ -8,3 +8,4 @@ run.bat
 .replit
 replit.nix
 tempdir
+config.json
